@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="description"
+        content="Receba 2026 com uma celebração deslumbrante! Junte-se a nós para uma experiência inesquecível de Ano Novo com contagem regressiva, fogos de artifício e muito mais.">
+    <title>Bem-vindo 2026 - Feliz Ano Novo</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon/favicon.png">
+    <link rel="apple-touch-icon" href="favicon/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+</head>
+
+<body>
+    <!-- Background Effects -->
+    <div class="bg-gradient"></div>
+    <div class="particles" id="particles"></div>
+    <canvas id="fireworks"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">Ano Novo 2026</span>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Alternar menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Início</a>
+                <a href="#countdown" class="nav-link">Contagem</a>
+                <a href="#resolutions" class="nav-link">Resoluções</a>
+                <a href="#memories" class="nav-link">Memórias</a>
+                <a href="#quotes" class="nav-link">Frases</a>
+                <a href="pages/fortune.html" class="nav-link">🔮 Sorte</a>
+                <a href="pages/2025.html" class="nav-link">🚀 Tech 2025</a>
+                <a href="#contact" class="nav-link">Contato</a>
+            </div>
+
+            <div class="nav-controls">
+                <button class="control-btn music-toggle" id="musicToggle" aria-label="Toggle music"
+                    title="Toggle Music">
+                    <span class="music-icon">🔇</span>
+                </button>
+                <button class="control-btn theme-toggle" id="themeToggle" aria-label="Toggle theme"
+                    title="Toggle Theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="https://assets.mixkit.co/music/preview/mixkit-happy-new-year-387.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-shimmer">✨ Especial de Ano Novo ✨</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="year-old" id="yearOld">2025</span>
+                <span class="arrow">→</span>
+                <span class="year-new" id="yearNew">2026</span>
+            </h1>
+            <p class="hero-subtitle">Uma Jornada para Novos Começos</p>
+            <div class="hero-description">
+                <p>Celebre a magia dos novos começos enquanto nos despedimos de 2025 e abraçamos as infinitas
+                    possibilidades de 2026.</p>
+            </div>
+            <div class="cta-buttons">
+                <div class="cta-row">
+                    <button class="btn btn-primary" onclick="scrollToSection('countdown')">
+                        <span>Ver Contagem</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button class="btn btn-secondary" onclick="startCelebration()">
+                        <span>Iniciar Fogos</span>
+                        <span class="sparkle">🎆</span>
+                    </button>
+                </div>
+                <div class="cta-row cta-row-center">
+                    <button class="btn btn-tech" onclick="visitTo2025Tech()">
+                        <span class="tech-icon">🚀</span>
+                        <span>Visitar Tech 2025</span>
+                        <span class="tech-countdown" id="techCountdown">3</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="floating-elements">
+            <div class="float-item" style="--delay: 0s; --x: 10%; --y: 20%;">🎉</div>
+            <div class="float-item" style="--delay: 1s; --x: 80%; --y: 30%;">🎊</div>
+            <div class="float-item" style="--delay: 2s; --x: 15%; --y: 70%;">✨</div>
+            <div class="float-item" style="--delay: 1.5s; --x: 85%; --y: 60%;">🎆</div>
+            <div class="float-item" style="--delay: 0.5s; --x: 50%; --y: 80%;">🌟</div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section id="countdown" class="countdown-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contagem para 2026</h2>
+                <p class="section-subtitle">Cada segundo nos aproxima de um novo capítulo</p>
+            </div>
+
+            <div class="countdown-display">
+                <div class="countdown-item">
+                    <div class="countdown-card">
+                        <div class="countdown-value" id="days">00</div>
+                        <div class="countdown-ring"></div>
+                    </div>
+                    <div class="countdown-label">Dias</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-card">
+                        <div class="countdown-value" id="hours">00</div>
+                        <div class="countdown-ring"></div>
+                    </div>
+                    <div class="countdown-label">Horas</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-card">
+                        <div class="countdown-value" id="minutes">00</div>
+                        <div class="countdown-ring"></div>
+                    </div>
+                    <div class="countdown-label">Minutos</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-card">
+                        <div class="countdown-value" id="seconds">00</div>
+                        <div class="countdown-ring"></div>
+                    </div>
+                    <div class="countdown-label">Segundos</div>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="yearProgress"></div>
+                <div class="progress-label">Progresso do Ano: <span id="progressPercent">0%</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Celebration Section -->
+    <section id="celebration" class="celebration-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Metas e Sonhos para 2026</h2>
+                <p class="section-subtitle">O que você vai conquistar no novo ano?</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="feature-card">
+                    <div class="card-icon">🎯</div>
+                    <h3 class="card-title">Definir Metas</h3>
+                    <p class="card-description">Defina suas aspirações e crie um roteiro para o sucesso em 2026.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-icon">🚀</div>
+                    <h3 class="card-title">Agir</h3>
+                    <p class="card-description">Transforme seus sonhos em realidade com esforço consistente e dedicação.
+                    </p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-icon">💫</div>
+                    <h3 class="card-title">Alcançar o Sucesso</h3>
+                    <p class="card-description">Celebre suas vitórias e aprenda com cada experiência.</p>
+                    <div class="card-shine"></div>
+                </div>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-value" data-target="365">0</div>
+                    <div class="stat-label">Dias de Oportunidade</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" data-target="8760">0</div>
+                    <div class="stat-label">Horas para Exceler</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" data-target="525600">0</div>
+                    <div class="stat-label">Minutos para Brilhar</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wishes Section -->
+    <section id="wishes" class="wishes-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Desejos de Ano Novo</h2>
+                <p class="section-subtitle">Compartilhe suas esperanças e sonhos para 2026</p>
+            </div>
+
+            <div class="wishes-input-container">
+                <div class="wish-input-wrapper">
+                    <input type="text" id="wishInput" class="wish-input" placeholder="Escreva seu desejo para 2026...">
+                    <button class="wish-submit" id="submitWish">
+                        <span>Fazer um Pedido</span>
+                        <span class="wish-icon">⭐</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="wishes-display" id="wishesDisplay">
+                <div class="wish-card">
+                    <div class="wish-content">🌟 Que 2026 traga saúde, felicidade e sucesso!</div>
+                </div>
+                <div class="wish-card">
+                    <div class="wish-content">✨ Desejando um ano cheio de alegria e prosperidade!</div>
+                </div>
+                <div class="wish-card">
+                    <div class="wish-content">🎊 Um brinde a novas aventuras e belas memórias em 2026!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resolutions Section -->
+    <section id="resolutions" class="resolutions-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Resoluções para 2026</h2>
+                <p class="section-subtitle">Defina suas metas e acompanhe seu progresso</p>
+                <button class="btn btn-secondary random-resolution-btn" onclick="generateRandomResolution()">
+                    <span>🎲 Ideia de Resolução Aleatória</span>
+                </button>
+            </div>
+
+            <div class="resolutions-grid">
+                <div class="resolution-card">
+                    <div class="resolution-icon">💪</div>
+                    <h3 class="resolution-title">Saúde e Fitness</h3>
+                    <p class="resolution-desc">Manter-se ativo, comer saudável e priorizar o bem-estar</p>
+                    <div class="resolution-progress">
+                        <div class="progress-tracker">
+                            <div class="progress-bar-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Completo</span>
+                    </div>
+                </div>
+
+                <div class="resolution-card">
+                    <div class="resolution-icon">📚</div>
+                    <h3 class="resolution-title">Aprender e Crescer</h3>
+                    <p class="resolution-desc">Ler mais livros e adquirir novas habilidades</p>
+                    <div class="resolution-progress">
+                        <div class="progress-tracker">
+                            <div class="progress-bar-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Completo</span>
+                    </div>
+                </div>
+
+                <div class="resolution-card">
+                    <div class="resolution-icon">💼</div>
+                    <h3 class="resolution-title">Metas de Carreira</h3>
+                    <p class="resolution-desc">Avançar na carreira e alcançar marcos</p>
+                    <div class="resolution-progress">
+                        <div class="progress-tracker">
+                            <div class="progress-bar-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Completo</span>
+                    </div>
+                </div>
+
+                <div class="resolution-card">
+                    <div class="resolution-icon">❤️</div>
+                    <h3 class="resolution-title">Relacionamentos</h3>
+                    <p class="resolution-desc">Fortalecer laços com família e amigos</p>
+                    <div class="resolution-progress">
+                        <div class="progress-tracker">
+                            <div class="progress-bar-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Completo</span>
+                    </div>
+                </div>
+
+                <div class="resolution-card">
+                    <div class="resolution-icon">💰</div>
+                    <h3 class="resolution-title">Liberdade Financeira</h3>
+                    <p class="resolution-desc">Economizar mais, investir com sabedoria e construir riqueza</p>
+                    <div class="resolution-progress">
+                        <div class="progress-tracker">
+                            <div class="progress-bar-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Completo</span>
+                    </div>
+                </div>
+
+                <div class="resolution-card">
+                    <div class="resolution-icon">🌍</div>
+                    <h3 class="resolution-title">Viagens e Aventura</h3>
+                    <p class="resolution-desc">Explorar novos lugares e criar memórias</p>
+                    <div class="resolution-progress">
+                        <div class="progress-tracker">
+                            <div class="progress-bar-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Completo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memories Section -->
+    <section id="memories" class="memories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Memórias de 2025</h2>
+                <p class="section-subtitle">Valorizando os momentos que tornaram este ano especial</p>
+            </div>
+
+            <div class="memories-gallery">
+                <div class="memory-card" style="--delay: 0s">
+                    <div class="memory-month">Janeiro</div>
+                    <div class="memory-content">
+                        <div class="memory-emoji">🎯</div>
+                        <p class="memory-text">Começou o ano com metas ambiciosas e determinação</p>
+                    </div>
+                </div>
+
+                <div class="memory-card" style="--delay: 0.1s">
+                    <div class="memory-month">Março</div>
+                    <div class="memory-content">
+                        <div class="memory-emoji">🌸</div>
+                        <p class="memory-text">Abraçou novos começos e novas oportunidades</p>
+                    </div>
+                </div>
+
+                <div class="memory-card" style="--delay: 0.2s">
+                    <div class="memory-month">Junho</div>
+                    <div class="memory-content">
+                        <div class="memory-emoji">☀️</div>
+                        <p class="memory-text">Aventuras de verão e experiências inesquecíveis</p>
+                    </div>
+                </div>
+
+                <div class="memory-card" style="--delay: 0.3s">
+                    <div class="memory-month">Setembro</div>
+                    <div class="memory-content">
+                        <div class="memory-emoji">🍂</div>
+                        <p class="memory-text">Alcançou marcos e celebrou vitórias</p>
+                    </div>
+                </div>
+
+                <div class="memory-card" style="--delay: 0.4s">
+                    <div class="memory-month">Dezembro</div>
+                    <div class="memory-content">
+                        <div class="memory-emoji">🎄</div>
+                        <p class="memory-text">Refletindo sobre o crescimento e se preparando para 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quotes Section -->
+    <section id="quotes" class="quotes-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frases Inspiradoras</h2>
+                <p class="section-subtitle">Palavras de sabedoria para o novo ano</p>
+            </div>
+
+            <div class="quotes-carousel">
+                <div class="quote-card active">
+                    <div class="quote-mark">"</div>
+                    <p class="quote-text">Seu futuro é criado pelo que você faz hoje, não amanhã.</p>
+                    <p class="quote-author">— Robert Kiyosaki</p>
+                </div>
+
+                <div class="quote-card">
+                    <div class="quote-mark">"</div>
+                    <p class="quote-text">O melhor momento para novos começos é agora.</p>
+                    <p class="quote-author">— Desconhecido</p>
+                </div>
+
+                <div class="quote-card">
+                    <div class="quote-mark">"</div>
+                    <p class="quote-text">Ano novo, novas oportunidades, novas aventuras, novo você!</p>
+                    <p class="quote-author">— Desconhecido</p>
+                </div>
+
+                <div class="quote-card">
+                    <div class="quote-mark">"</div>
+                    <p class="quote-text">Amanhã é a primeira página em branco de um livro de 365 páginas. Escreva uma
+                        boa.</p>
+                    <p class="quote-author">— Brad Paisley</p>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn prev" onclick="changeQuote(-1)">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="carousel-dots" id="quoteDots"></div>
+                <button class="carousel-btn next" onclick="changeQuote(1)">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Linha do Tempo 2026</h2>
+                <p class="section-subtitle">Marque no seu calendário para um ano incrível pela frente</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1 de Janeiro</div>
+                        <h3 class="timeline-title">O Ano Novo Começa!</h3>
+                        <p class="timeline-desc">Receba 2026 com alegria e entusiasmo</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1º Trimestre 2026</div>
+                        <h3 class="timeline-title">Metas do Primeiro Trimestre</h3>
+                        <p class="timeline-desc">Estabeleça a base para o sucesso</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Meio do Ano</div>
+                        <h3 class="timeline-title">Revisão de Progresso</h3>
+                        <p class="timeline-desc">Avalie conquistas e ajuste metas</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">4º Trimestre 2026</div>
+                        <h3 class="timeline-title">Celebração de Fim de Ano</h3>
+                        <p class="timeline-desc">Celebre conquistas e planeje o futuro</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="section-subtitle">Tem perguntas ou quer compartilhar sua história de Ano Novo? Adoraríamos
+                    ouvir de
+                    você!</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 class="contact-info-title">Vamos nos Conectar</h3>
+                    <p class="contact-info-desc">Compartilhe seus desejos de Ano Novo, sugestões ou apenas diga olá!
+                        Estamos aqui
+                        para tornar 2026 incrível juntos.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-detail-text">
+                                <h4>Email</h4>
+                                <p>cyberchristian92@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="contact-icon">🌐</div>
+                            <div class="contact-detail-text">
+                                <h4>LinkedIn</h4>
+                                <p><a href="https://www.linkedin.com/in/christian-amarildo/" target="_blank"
+                                        style="color: inherit; text-decoration: none;">Christian Amarildo</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <!-- Watermark -->
+    <div class="watermark">
+        <div class="watermark-content">
+            <span class="watermark-icon">✨</span>
+            <span class="watermark-text">criado por <span class="watermark-author">Christian Amarildo</span></span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p class="footer-main">Feliz Ano Novo 2026!</p>
+                <p class="footer-sub">Que este ano traga alegria e sucesso sem fim</p>
+            </div>
+            <div class="footer-social">
+                <div class="social-icon">🎉</div>
+                <div class="social-icon">🎊</div>
+                <div class="social-icon">✨</div>
+                <div class="social-icon">🎆</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Celebração de Ano Novo. Feito com ❤️ e ✨ por <span class="footer-author"><a
+                        href="https://www.linkedin.com/in/christian-amarildo/">Christian Amarildo</a></span></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Modules -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>

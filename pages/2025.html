@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="description"
+        content="Descubra as atualizações e avanços tecnológicos mais importantes de 2025. Da IA à Computação Quântica, explore as inovações que moldaram o ano.">
+    <title>Atualizações Tecnológicas 2025 - Avanços Tecnológicos</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../favicon/favicon.png">
+    <link rel="apple-touch-icon" href="../favicon/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/tech-styles.css">
+</head>
+
+<body>
+    <!-- Background Effects -->
+    <div class="bg-gradient"></div>
+    <div class="particles" id="particles"></div>
+    <canvas id="fireworks"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">Tech 2025</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Início</a>
+                <a href="#hero" class="nav-link active">Visão Geral</a>
+                <a href="#ai" class="nav-link">IA</a>
+                <a href="#quantum" class="nav-link">Quântica</a>
+                <a href="#connectivity" class="nav-link">5G/6G</a>
+                <a href="#vr-ar" class="nav-link">RV/RA</a>
+                <a href="#sustainability" class="nav-link">Tech Verde</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="tech-hero">
+        <div class="tech-hero-content">
+            <div class="tech-hero-text">
+                <div class="hero-badge">
+                    <span class="badge-shimmer">✨ Retrospectiva do Ano ✨</span>
+                </div>
+                <h1 class="tech-hero-title">
+                    <span class="tech-year">2025</span>
+                    <span class="tech-headline">Atualizações Tecnológicas</span>
+                </h1>
+                <p class="tech-hero-subtitle">Um Ano de Inovação, Avanços e Transformação Digital</p>
+                <div class="tech-hero-description">
+                    <p>Descubra as tecnologias inovadoras que definiram 2025 e moldaram o futuro da humanidade.
+                        Da inteligência artificial à computação quântica, explore as inovações que transformaram nosso
+                        mundo.</p>
+                </div>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('ai')">
+                        <span>Explorar Atualizações</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button class="btn btn-secondary" onclick="startCelebration()">
+                        <span>Iniciar Animação</span>
+                        <span class="sparkle">✨</span>
+                    </button>
+                </div>
+            </div>
+            <div class="tech-hero-image">
+                <img src="../images/tech_2025_hero_1766258032401.png" alt="2025 Technology Innovation">
+                <div class="image-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="tech-stats-section">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-value" data-target="500">0</div>
+                    <div class="stat-label">Bilhões de Parâmetros de IA</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" data-target="1000">0</div>
+                    <div class="stat-label">Qubits Quânticos Alcançados</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" data-target="6">0</div>
+                    <div class="stat-label">Lançamento de Protótipo 6G</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" data-target="100">0</div>
+                    <div class="stat-label">Milhões de Usuários de RV/RA</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI & Machine Learning Updates -->
+    <section id="ai" class="tech-update-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🤖 Inteligência Artificial e Aprendizado de Máquina</h2>
+                <p class="section-subtitle">Avanços revolucionários em IA transformando todas as indústrias</p>
+            </div>
+
+            <div class="tech-content-grid">
+                <div class="tech-image-container">
+                    <img src="../images/ai_advancement_2025_1766258051883.png" alt="Avanço da IA 2025"
+                        class="tech-feature-img">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="tech-details">
+                    <h3 class="tech-category-title">Principais Avanços em IA</h3>
+                    <div class="tech-update-list">
+                        <div class="tech-item">
+                            <div class="tech-icon">🧠</div>
+                            <div class="tech-content">
+                                <h4>GPT-5 e LLMs Avançados</h4>
+                                <p>O GPT-5 da OpenAI alcançou compreensão de linguagem sem precedentes com mais de 500B
+                                    de parâmetros,
+                                    capacidades multimodais e raciocínio quase humano em tarefas complexas.</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🎨</div>
+                            <div class="tech-content">
+                                <h4>Revolução da IA Generativa</h4>
+                                <p>DALL-E 4, Midjourney v7 e Stable Diffusion XL trouxeram geração de imagem
+                                    fotorrealista,
+                                    síntese de vídeo e criação de modelos 3D para o mainstream.</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">⚕️</div>
+                            <div class="tech-content">
+                                <h4>IA na Saúde</h4>
+                                <p>Diagnósticos baseados em IA alcançaram 99% de precisão na detecção de câncer,
+                                    descoberta de medicamentos
+                                    acelerada em 10x e medicina personalizada tornou-se realidade.</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🚗</div>
+                            <div class="tech-content">
+                                <h4>Sistemas Autônomos</h4>
+                                <p>Veículos autônomos de Nível 5 aprovados em 15 países, drones de entrega tornaram-se
+                                    comuns e a robótica atingiu destreza de nível humano.</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🔐</div>
+                            <div class="tech-content">
+                                <h4>Segurança e Ética da IA</h4>
+                                <p>Novos quadros globais de governança de IA estabelecidos, padrões de marca d'água para
+                                    conteúdo
+                                    de IA e soluções inovadoras para problemas de alinhamento de IA.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quantum Computing Updates -->
+    <section id="quantum" class="tech-update-section alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">⚛️ Computação Quântica</h2>
+                <p class="section-subtitle">Quebrando as fronteiras da computação clássica</p>
+            </div>
+
+            <div class="tech-content-grid reverse">
+                <div class="tech-details">
+                    <h3 class="tech-category-title">Marcos Quânticos</h3>
+                    <div class="tech-update-list">
+                        <div class="tech-item">
+                            <div class="tech-icon">💎</div>
+                            <div class="tech-content">
+                                <h4>Processadores de 1000 Qubits</h4>
+                                <p>IBM e Google alcançaram processadores quânticos estáveis de 1000+ qubits com correção
+                                    de erros, permitindo poder computacional sem precedentes.</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🔬</div>
+                            <div class="tech-content">
+                                <h4>Aplicações de Supremacia Quântica</h4>
+                                <p>Primeiras aplicações práticas na descoberta de medicamentos, ciência dos materiais e
+                                    criptografia.
+                                    Simulações quânticas resolveram problemas impossíveis para computadores clássicos.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🌐</div>
+                            <div class="tech-content">
+                                <h4>Protótipo de Internet Quântica</h4>
+                                <p>Primeiras redes de comunicação quântica implantadas nas principais cidades,
+                                    permitindo
+                                    transmissão de dados inquebrável usando emaranhamento quântico.</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🏢</div>
+                            <div class="tech-content">
+                                <h4>Serviços Quânticos Comerciais</h4>
+                                <p>Serviços de computação quântica baseados em nuvem da AWS, Azure e Google Cloud
+                                    tornaram
+                                    o poder quântico acessível a pesquisadores e empresas em todo o mundo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-image-container">
+                    <img src="../images/quantum_computing_2025_1766258067955.png" alt="Quantum Computing 2025"
+                        class="tech-feature-img">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5G/6G Connectivity Updates -->
+    <section id="connectivity" class="tech-update-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">📡 Conectividade 5G/6G</h2>
+                <p class="section-subtitle">A próxima geração de tecnologia sem fio</p>
+            </div>
+
+            <div class="tech-content-grid">
+                <div class="tech-image-container">
+                    <img src="../images/connectivity_2025_1766258084587.png" alt="Conectividade 5G 6G 2025"
+                        class="tech-feature-img">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="tech-details">
+                    <h3 class="tech-category-title">Revolução da Conectividade</h3>
+                    <div class="tech-update-list">
+                        <div class="tech-item">
+                            <div class="tech-icon">📶</div>
+                            <div class="tech-content">
+                                <h4>Cobertura Global 5G</h4>
+                                <p>85% de cobertura mundial 5G alcançada com velocidades de até 10 Gbps, permitindo
+                                    streaming
+                                    contínuo, jogos e conectividade IoT em todos os lugares.</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🛰️</div>
+                            <div class="tech-content">
+                                <h4>Lançamento de Desenvolvimento 6G</h4>
+                                <p>Primeiros protótipos 6G demonstraram velocidades de 100 Gbps com latência
+                                    sub-milissegundo.
+                                    Lançamento comercial previsto para 2028.</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🌍</div>
+                            <div class="tech-content">
+                                <h4>Expansão da Internet via Satélite</h4>
+                                <p>Starlink, OneWeb e Kuiper alcançaram cobertura global com mais de 100.000 satélites,
+                                    fornecendo internet de alta velocidade para áreas remotas.</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🏙️</div>
+                            <div class="tech-content">
+                                <h4>Cidades Inteligentes e IoT</h4>
+                                <p>Mais de 50 cidades tornaram-se cidades inteligentes totalmente conectadas com mais de
+                                    10 bilhões de dispositivos IoT gerenciando
+                                    tráfego, energia e serviços públicos em tempo real.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VR/AR/Metaverse Updates -->
+    <section id="vr-ar" class="tech-update-section alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🥽 RV, RA e Metaverso</h2>
+                <p class="section-subtitle">Experiências imersivas redefinindo a realidade</p>
+            </div>
+
+            <div class="tech-content-grid reverse">
+                <div class="tech-details">
+                    <h3 class="tech-category-title">Avanços em Realidade Estendida</h3>
+                    <div class="tech-update-list">
+                        <div class="tech-item">
+                            <div class="tech-icon">👓</div>
+                            <div class="tech-content">
+                                <h4>Headsets RV de Próxima Geração</h4>
+                                <p>Apple Vision Pro 2, Meta Quest 4 e Sony PSVR 3 ofereceram resolução 8K+,
+                                    rastreamento ocular e feedback tátil para experiências hiper-realistas.</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🔮</div>
+                            <div class="tech-content">
+                                <h4>Óculos Inteligentes RA</h4>
+                                <p>Óculos RA leves do Google, Apple e Snap integraram-se perfeitamente à
+                                    vida diária com tradução em tempo real, navegação e sobreposição de informações.</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🌐</div>
+                            <div class="tech-content">
+                                <h4>Plataformas de Metaverso</h4>
+                                <p>Mais de 100 milhões de usuários ativos diários em plataformas de metaverso. Espaços
+                                    de trabalho virtuais, shows,
+                                    compras e educação tornaram-se experiências comuns.</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🎮</div>
+                            <div class="tech-content">
+                                <h4>Jogos e Entretenimento</h4>
+                                <p>Trajes táteis de corpo inteiro, interfaces cérebro-computador para jogos e mundos
+                                    virtuais
+                                    fotorrealistas confundiram a linha entre realidade e simulação.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-image-container">
+                    <img src="../images/vr_ar_2025_1766258102850.png" alt="VR AR Metaverse 2025"
+                        class="tech-feature-img">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Green Tech & Sustainability -->
+    <section id="sustainability" class="tech-update-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🌱 Tecnologia Verde e Sustentabilidade</h2>
+                <p class="section-subtitle">Tecnologia impulsionando soluções ambientais</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="feature-card">
+                    <div class="card-icon">🔋</div>
+                    <h3 class="card-title">Armazenamento de Energia</h3>
+                    <p class="card-description">Baterias de estado sólido alcançaram densidade de energia de 1000 Wh/kg
+                        com carregamento
+                        10x mais rápido e vida útil de 20 anos, revolucionando VEs e armazenamento renovável.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-icon">☀️</div>
+                    <h3 class="card-title">Inovação Solar</h3>
+                    <p class="card-description">Células solares de perovskita atingiram 35% de eficiência. Janelas
+                        solares
+                        transparentes tornaram-se padrão em novos edifícios, gerando energia silenciosamente.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-icon">💨</div>
+                    <h3 class="card-title">Vento e Hidrogênio</h3>
+                    <p class="card-description">Parques eólicos offshore flutuantes e produção de hidrogênio verde
+                        escalaram
+                        globalmente. Protótipos de aviação movidos a hidrogênio completaram voos bem-sucedidos.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-icon">♻️</div>
+                    <h3 class="card-title">Captura de Carbono</h3>
+                    <p class="card-description">Tecnologia de captura direta de ar tornou-se economicamente viável. Mais
+                        de 100
+                        instalações removendo 10 milhões de toneladas de CO₂ anualmente da atmosfera.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-icon">🌊</div>
+                    <h3 class="card-title">Tecnologia da Água</h3>
+                    <p class="card-description">Dessalinização avançada usando filtros de grafeno reduziu custos em 80%.
+                        Sistemas de gestão de água impulsionados por IA evitaram desperdícios globalmente.</p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-icon">🌾</div>
+                    <h3 class="card-title">AgriTech</h3>
+                    <p class="card-description">Fazendas verticais com otimização de IA produziram 100x mais alimentos
+                        por acre.
+                        Carne cultivada em laboratório alcançou paridade de preço com carne convencional.</p>
+                    <div class="card-shine"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Notable Updates -->
+    <section class="tech-update-section alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🚀 Outros Grandes Avanços</h2>
+                <p class="section-subtitle">Inovações adicionais que moldaram 2025</p>
+            </div>
+
+            <div class="tech-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">🧬 Biotecnologia</div>
+                        <h3 class="timeline-title">Terapia Gênica CRISPR Aprovada</h3>
+                        <p class="timeline-desc">FDA aprovou mais de 50 terapias gênicas usando CRISPR para tratar
+                            doenças
+                            genéticas. A medicina personalizada tornou-se acessível em todo o mundo.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">🔐 Cibersegurança</div>
+                        <h3 class="timeline-title">Criptografia Pós-Quântica</h3>
+                        <p class="timeline-desc">Adoção global de padrões de criptografia resistentes a quântica.
+                            Arquitetura
+                            Zero-trust tornou-se obrigatória para segurança empresarial.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">🏠 Casa Inteligente</div>
+                        <h3 class="timeline-title">Adoção Universal do Protocolo Matter</h3>
+                        <p class="timeline-desc">Todos os dispositivos domésticos inteligentes tornaram-se
+                            interoperáveis. Assistentes de voz alcançaram
+                            verdadeira compreensão contextual com 99% de precisão.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">🚀 Tecnologia Espacial</div>
+                        <h3 class="timeline-title">Início da Construção da Base Lunar</h3>
+                        <p class="timeline-desc">Programa Artemis iniciou a construção de base lunar permanente. SpaceX
+                            Starship completou mais de 100 missões orbitais com reutilização total.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">💰 Fintech e Blockchain</div>
+                        <h3 class="timeline-title">CBDCs Tornam-se Mainstream</h3>
+                        <p class="timeline-desc">Mais de 50 países lançaram moedas digitais de banco central. Ethereum
+                            3.0
+                            alcançou 100.000 TPS com taxas quase zero e neutralidade de carbono.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">📚 Tecnologia Educacional</div>
+                        <h3 class="timeline-title">Aprendizado Personalizado com IA</h3>
+                        <p class="timeline-desc">Tutores de IA fornecendo educação personalizada em escala. Salas de
+                            aula de RV
+                            permitiram aprendizado imersivo em mais de 10.000 escolas globalmente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Looking Forward -->
+    <section class="tech-future-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🔮 Olhando para 2026</h2>
+                <p class="section-subtitle">O que vem por aí na tecnologia</p>
+            </div>
+
+            <div class="future-grid">
+                <div class="future-card">
+                    <div class="future-number">01</div>
+                    <h3>Desenvolvimento de AGI</h3>
+                    <p>Protótipos de Inteligência Artificial Geral esperados para demonstrar raciocínio de nível humano
+                        em
+                        todos os domínios.</p>
+                </div>
+                <div class="future-card">
+                    <div class="future-number">02</div>
+                    <h3>Vantagem Quântica</h3>
+                    <p>Computadores quânticos resolvendo problemas de otimização do mundo real 1000x mais rápido que
+                        supercomputadores.</p>
+                </div>
+                <div class="future-card">
+                    <div class="future-number">03</div>
+                    <h3>Interfaces Neurais</h3>
+                    <p>Interfaces cérebro-computador permitindo comunicação direta pensamento-texto e aprimoramento de
+                        memória.
+                    </p>
+                </div>
+                <div class="future-card">
+                    <div class="future-number">04</div>
+                    <h3>Energia de Fusão</h3>
+                    <p>Primeiros protótipos de reatores de fusão comercial gerando energia limpa ilimitada tornando-se
+                        realidade.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="tech-cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Mantenha-se Atualizado com as Últimas Tecnologias</h2>
+                <p>Junte-se a milhares de entusiastas de tecnologia acompanhando o futuro da inovação</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="window.location.href='../index.html'">
+                        <span>Voltar ao Início</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('hero')">
+                        <span>Voltar ao Topo</span>
+                        <span class="sparkle">⬆️</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <!-- Watermark -->
+    <div class="watermark">
+        <div class="watermark-content">
+            <span class="watermark-icon">✨</span>
+            <span class="watermark-text">criado por <span class="watermark-author">Christian Amarildo</span></span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p class="footer-main">Retrospectiva Tecnológica de 2025</p>
+                <p class="footer-sub">Celebrando a inovação e olhando para 2026</p>
+            </div>
+            <div class="footer-social">
+                <div class="social-icon">🚀</div>
+                <div class="social-icon">🤖</div>
+                <div class="social-icon">⚛️</div>
+                <div class="social-icon">🌟</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025-2026 Atualizações Tecnológicas. Feito com ❤️ e ✨ por <span class="footer-author"><a
+                        href="https://www.linkedin.com/in/christian-amarildo/">Christian Amarildo</a></span></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Modules -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script type="module" src="../js/script.js"></script>
+
+    <!-- Enhanced inline script with all functions -->
+    <script>
+        // Smooth scroll to section
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Start celebration with confetti
+        function startCelebration() {
+            if (typeof confetti === 'function') {
+                const duration = 3000;
+                const end = Date.now() + duration;
+
+                (function frame() {
+                    confetti({
+                        particleCount: 3,
+                        angle: 60,
+                        spread: 55,
+                        origin: { x: 0 },
+                        colors: ['#667eea', '#764ba2', '#f093fb', '#00f2fe']
+                    });
+                    confetti({
+                        particleCount: 3,
+                        angle: 120,
+                        spread: 55,
+                        origin: { x: 1 },
+                        colors: ['#667eea', '#764ba2', '#f093fb', '#00f2fe']
+                    });
+
+                    if (Date.now() < end) {
+                        requestAnimationFrame(frame);
+                    }
+                })();
+            }
+        }
+
+        // Stats counter animation
+        function animateStats() {
+            const stats = document.querySelectorAll('.stat-value');
+            stats.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+
+                const updateStat = () => {
+                    current += increment;
+                    if (current < target) {
+                        stat.textContent = Math.floor(current);
+                        requestAnimationFrame(updateStat);
+                    } else {
+                        stat.textContent = target;
+                    }
+                };
+                updateStat();
+            });
+        }
+
+        // Back to top button functionality
+        function initBackToTop() {
+            const backToTopBtn = document.getElementById('backToTop');
+            if (!backToTopBtn) return;
+
+            // Show/hide on scroll
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+
+            // Scroll to top on click
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Initialize particles background
+        function initParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Navbar scroll effect
+        function initNavbar() {
+            const navbar = document.querySelector('.navbar');
+            if (!navbar) return;
+
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 100) {
+                    navbar.style.background = 'rgba(10, 10, 15, 0.95)';
+                    navbar.style.backdropFilter = 'blur(20px)';
+                } else {
+                    navbar.style.background = 'rgba(255, 255, 255, 0.05)';
+                    navbar.style.backdropFilter = 'blur(20px)';
+                }
+            });
+
+            // Active link update on scroll
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop - 200) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        // Intersection Observer for animations
+        function initAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.tech-item, .feature-card, .timeline-item, .future-card').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.6s ease';
+                observer.observe(el);
+            });
+        }
+
+        // Initialize everything when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            initParticles();
+            initBackToTop();
+            initNavbar();
+            initAnimations();
+
+            // Trigger stats animation when stats section is visible
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateStats();
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const statsSection = document.querySelector('.tech-stats-section');
+            if (statsSection) {
+                statsObserver.observe(statsSection);
+            }
+        });
+    </script>
+</body>
+
+</html>
